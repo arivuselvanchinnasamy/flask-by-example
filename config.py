@@ -6,7 +6,8 @@ class Config(object) :
     TESTING= False
     CRSF_Enabled= True
     SECRET_KEY="mysecret"
-
+    SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
+    
 class StagingConfig(Config):
     DEVELOPMENT = True
     DEBUG = True
