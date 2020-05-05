@@ -4,10 +4,10 @@ from sqlalchemy.dialects.postgresql import JSON
 class Result(db.Model) :
     _tablename_ = "results"
 
-    id = db.column(db.Integer, primary_key = True)
-    url = db.column(db.String())
-    result_all = db.column(JSON)
-    result_no_stop_words = db.column(JSON)
+    id = db.Column(db.Integer, primary_key = True)
+    url = db.Column(db.String())
+    result_all = db.Column(JSON)
+    result_no_stop_words = db.Column(JSON)
 
 
     def __init__(self, url, result_all, result_no_stop_words):
